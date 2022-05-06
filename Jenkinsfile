@@ -52,9 +52,9 @@ pipeline {
                 } 
                 }
         }
-          stage('cat README') {
+          stage('cat README develop') {
             when{
-                branch "fix-*"
+                branch "develop-*"
             }
             steps {
                 sh '''
