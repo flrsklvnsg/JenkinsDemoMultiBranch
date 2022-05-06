@@ -31,13 +31,16 @@ pipeline {
         }
             stage('Test') {
             steps {
-                when{
+           /*     when{
                     expression{
                         params.executeTests
                     }
-                }
+           */     }
                  script{
-                    gv.testApp()
+                     if(params.executeTests == true){
+                        gv.testApp()
+                     }
+                   
                 } 
             }
         }
