@@ -4,7 +4,7 @@ pipeline {
     agent {label "linux"}
     options{
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr:'5')
-        disableConcurrentBuild()
+        disableConcurrentBuilds()
     }
     parameters{
         string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
