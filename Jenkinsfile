@@ -35,7 +35,8 @@ pipeline {
                     expression{
                         params.executeTests
                     }
-           */     }
+               }
+                */
                  script{
                      if(params.executeTests == true){
                         gv.testApp()
